@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  /* Couleurs de la marque growth */
+  --color-ink: #0c0c0d;
+  --color-paper: #fbf9f7;
+  --color-sand: #f4efea;
+  --color-blush: #f8eef4;
+  --color-ink-900: #0c0c0d;
+  --color-ink-800: #131315;
+  --color-ink-700: #1b1b1e;
+  --color-ink-600: #26262a;
+
+  --color-magenta-200: #f0c6e3;
+  --color-magenta-300: #e199cc;
+  --color-magenta-400: #cc5fac;
+  --color-magenta-500: #a62e86;
+  --color-magenta-600: #8a246f;
+  --color-magenta-700: #6c1c57;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-outfit), var(--font-inter), ui-sans-serif, sans-serif;
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--color-magenta-500);
+    color: #fff;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+}
+
+@utility container-x {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 76rem;
+  padding-inline: 1.25rem;
+  @media (width >= 40rem) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Fond quadrillé discret */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(0 0 0 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(0 0 0 / 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Quadrillage clair, pour les blocs foncés ou magenta */
+@utility bg-grid-light {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.07) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+@utility text-gradient {
+  background: linear-gradient(100deg, var(--color-magenta-600) 0%, var(--color-magenta-500) 45%, var(--color-magenta-400) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Apparition au défilement (activée seulement si JavaScript tourne) */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .animate-marquee, .animate-float { animation: none; }
+}
