@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,7 +8,13 @@ import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import "./globals.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
-const outfit = Outfit({ variable: "--font-outfit", subsets: ["latin"], display: "swap" });
+const serif = Instrument_Serif({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -39,11 +45,11 @@ export const metadata: Metadata = {
   // verification: { google: "VOTRE_CODE" },
 };
 
-export const viewport: Viewport = { themeColor: "#fbf9f7" };
+export const viewport: Viewport = { themeColor: "#f8f5ef" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${outfit.variable}`} suppressHydrationWarning>
+    <html lang="fr" className={`${inter.variable} ${serif.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
       </head>

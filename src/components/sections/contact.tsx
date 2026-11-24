@@ -22,11 +22,11 @@ export function Contact() {
                 <p className="flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-white/80 uppercase">
                   <Square className="size-2 !bg-white" /> Contact
                 </p>
-                <h2 className="mt-5 text-4xl leading-[1.05] font-semibold sm:text-5xl">
-                  Prêt à faire grandir votre marque ?
+                <h2 className="mt-5 text-5xl leading-[1] sm:text-6xl">
+                  Écrivons le prochain chapitre de votre marque.
                 </h2>
                 <p className="mt-5 text-lg text-white/85">
-                  Réservez votre audit gratuit de 30 minutes. Sans engagement, avec des recommandations concrètes.
+                  Réservez un premier échange de 30 minutes, gratuit et sans engagement. Vous repartez avec un diagnostic et des pistes concrètes.
                 </p>
                 <ul className="mt-10 space-y-5">
                   {items.map(({ icon: Icon, label, value, href }) => (

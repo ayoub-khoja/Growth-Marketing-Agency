@@ -7,9 +7,9 @@ export function Faq() {
     <section id="faq" className="border-t border-black/6 bg-white py-24 sm:py-32">
       <div className="container-x grid gap-12 lg:grid-cols-[1fr_1.4fr]">
         <SectionHeading
-          index="06"
+          index="09"
           eyebrow="FAQ"
-          title="Vos questions, nos réponses"
+          title={<>Vos questions, <em className="text-magenta-500">nos réponses</em></>}
           text="Vous ne trouvez pas votre réponse ? Écrivez-nous, on vous répond dans la journée."
         />
         <div className="divide-y divide-black/8 border-y border-black/8" data-reveal>

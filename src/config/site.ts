@@ -6,10 +6,13 @@ export const siteConfig = {
   name: "Growth Marketing Agency",
   shortName: "growth",
   url: "https://growthmarketingagency.tn",
-  seoTitle: "Growth Marketing Agency | Agence de marketing digital en Tunisie",
+  seoTitle: "Growth | Agence créative & stratégique à Tunis : branding, contenu, performance",
+  tagline: "Creative minds. Measurable growth.",
   description:
-    "Agence de marketing digital à Tunis : stratégie, social media, publicité Meta & Google, création de contenu, branding et SEO. Des campagnes pensées pour faire grandir votre chiffre d'affaires.",
+    "Growth est une agence créative et stratégique basée à Tunis. Branding, production créative, social media, performance marketing, sites web et SEO pour les marques ambitieuses, en Tunisie et à l'international.",
   keywords: [
+    "agence créative Tunisie",
+    "agence de branding Tunis",
     "agence marketing digital Tunisie",
     "agence marketing Tunis",
     "community manager Tunisie",
@@ -41,9 +44,9 @@ export const siteConfig = {
 } as const;
 
 export const navLinks = [
-  { href: "#services", label: "Services" },
+  { href: "#agence", label: "L'agence" },
+  { href: "#expertises", label: "Expertises" },
+  { href: "#offres", label: "Offres" },
   { href: "#realisations", label: "Réalisations" },
   { href: "#methode", label: "Méthode" },
-  { href: "#avis", label: "Avis" },
-  { href: "#faq", label: "FAQ" },
 ] as const;

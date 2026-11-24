@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "growth Marketing Agency, agence de marketing digital en Tunisie";
+export const alt = "Growth, agence créative et stratégique à Tunis";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -38,11 +38,11 @@ export default function OgImage() {
           </svg>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontSize: 78, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2, maxWidth: 900 }}>
-              Votre marque mérite de grandir.
+              Creative minds. Measurable growth.
             </div>
             <div style={{ display: "flex", alignItems: "center", marginTop: 28, fontSize: 30, color: "rgba(255,255,255,0.65)" }}>
               <div style={{ width: 18, height: 18, background: "#A62E86", marginRight: 16 }} />
-              growth Marketing Agency · Tunis
+              Growth · Creative & Strategic Agency · Tunis
             </div>
           </div>
         </div>

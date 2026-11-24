@@ -48,7 +48,7 @@ export function Header() {
             href="#contact"
             className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-magenta-500 sm:inline-flex"
           >
-            Audit gratuit
+            Nous contacter
           </a>
           <button
             type="button"
@@ -74,7 +74,7 @@ export function Header() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="flex items-center justify-between border-b border-black/8 py-5 font-display text-2xl font-medium"
+              className="flex items-center justify-between border-b border-black/8 py-5 font-display text-3xl"
             >
               {l.label}
               <span className="size-2 bg-magenta-500" />
@@ -85,7 +85,7 @@ export function Header() {
             onClick={() => setOpen(false)}
             className="mt-8 inline-flex justify-center rounded-full bg-magenta-500 px-6 py-4 font-semibold text-white"
           >
-            Demander un audit gratuit
+            Parlons de votre marque
           </a>
         </nav>
       </div>

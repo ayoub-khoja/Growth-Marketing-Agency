@@ -7,9 +7,9 @@ export function Testimonials() {
     <section id="avis" className="py-24 sm:py-32">
       <div className="container-x">
         <SectionHeading
-          index="05"
+          index="08"
           eyebrow="Avis clients"
-          title="Ils nous font confiance pour leur croissance"
+          title={<>Ils nous confient <em className="text-magenta-500">leur croissance</em></>}
           align="center"
         />
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
@@ -39,7 +39,7 @@ export function Testimonials() {
                 </blockquote>
                 <figcaption className={`mt-8 flex items-center gap-3 border-t pt-6 ${featured ? "border-white/25" : "border-black/8"}`}>
                   <span
-                    className={`flex size-11 items-center justify-center rounded-full font-display font-semibold ${
+                    className={`flex size-11 items-center justify-center rounded-full font-display text-lg ${
                       featured ? "bg-white text-magenta-600" : "bg-blush text-magenta-600"
                     }`}
                   >

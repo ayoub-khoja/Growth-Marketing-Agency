@@ -11,8 +11,8 @@ export function Footer() {
         <div>
           <Logo tone="light" className="h-11 w-[134px]" />
           <p className="mt-6 max-w-xs text-sm leading-relaxed text-white/50">
-            Agence de marketing digital basée à {siteConfig.city}. Stratégie, contenus et publicité pour les marques
-            qui veulent grandir.
+            Creative &amp; Strategic Growth Agency basée à {siteConfig.city}. Branding, création, performance et
+            technologie pour les marques ambitieuses.
           </p>
         </div>
         <FooterCol title="Navigation">
@@ -22,10 +22,10 @@ export function Footer() {
             </li>
           ))}
         </FooterCol>
-        <FooterCol title="Services">
+        <FooterCol title="Expertises">
           {services.map((s) => (
             <li key={s.title}>
-              <a href="#services" className="hover:text-white">{s.title}</a>
+              <a href="#expertises" className="hover:text-white">{s.title}</a>
             </li>
           ))}
         </FooterCol>
@@ -43,7 +43,7 @@ export function Footer() {
       <div className="border-t border-white/8">
         <div className="container-x flex flex-col justify-between gap-2 py-6 text-xs text-white/40 sm:flex-row">
           <p>© {new Date().getFullYear()} {siteConfig.name}. Tous droits réservés.</p>
-          <p>Fait avec soin en Tunisie.</p>
+          <p className="font-display text-base text-white/60 italic">{siteConfig.tagline}</p>
         </div>
       </div>
     </footer>

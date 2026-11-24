@@ -3,12 +3,12 @@ import { caseStudies } from "@/content/home";
 
 export function Work() {
   return (
-    <section id="realisations" className="py-24 sm:py-32">
+    <section id="realisations" className="border-y border-black/6 bg-white py-24 sm:py-32">
       <div className="container-x">
         <SectionHeading
-          index="03"
+          index="06"
           eyebrow="Réalisations"
-          title="Des résultats concrets, pas des promesses"
+          title={<>Des résultats concrets, <em className="text-magenta-500">pas des promesses</em></>}
           text="Quelques campagnes récentes et l'impact mesuré sur l'activité de nos clients."
         />
 
@@ -16,7 +16,7 @@ export function Work() {
           {caseStudies.map((c, i) => (
             <article
               key={c.title}
-              className="group relative overflow-hidden rounded-3xl border border-black/8 bg-white p-8 shadow-[0_20px_60px_-35px_rgb(12_12_13/0.2)] transition-colors duration-500 hover:border-magenta-500/50 sm:p-10"
+              className="group relative overflow-hidden rounded-3xl border border-black/8 p-8 bg-paper transition-colors duration-500 hover:border-magenta-500/50 sm:p-10"
               data-reveal
               style={{ ["--reveal-delay" as string]: `${(i % 2) * 100}ms` }}
             >
@@ -28,7 +28,7 @@ export function Work() {
 
               <div className="relative mt-10 flex items-end justify-between gap-6">
                 <div>
-                  <p className="font-display text-6xl font-semibold tracking-tight text-ink sm:text-7xl">{c.metric}</p>
+                  <p className="font-display text-6xl text-ink sm:text-7xl">{c.metric}</p>
                   <p className="mt-2 text-sm font-medium text-magenta-500">{c.metricLabel}</p>
                 </div>
                 <div aria-hidden className="flex h-24 items-end gap-1.5">

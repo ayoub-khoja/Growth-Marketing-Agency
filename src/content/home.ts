@@ -1,97 +1,181 @@
 /**
  * Textes de la page d'accueil.
- * ⚠️ Les chiffres, les réalisations et les témoignages ci-dessous sont des EXEMPLES.
+ * ⚠️ Les chiffres, les réalisations et les témoignages sont des EXEMPLES.
  *    Remplacez-les par les vrais résultats et les vrais avis de vos clients avant la mise en ligne.
  */
 
 export const heroStats = [
+  { value: "7", label: "pôles d'expertise" },
   { value: "+120", label: "campagnes lancées" },
   { value: "x3,8", label: "ROAS moyen" },
-  { value: "45+", label: "marques accompagnées" },
 ];
 
-export const channels = [
-  "Instagram",
-  "Facebook",
-  "TikTok",
-  "Google Ads",
-  "LinkedIn",
-  "YouTube",
-  "Snapchat",
-  "SEO",
-  "E-mailing",
-  "Influence",
+/** Phrases signature qui défilent sous le haut de page */
+export const slogans = [
+  "Growth. Beyond visibility.",
+  "Think bold. Create impact. Drive growth.",
+  "We build brands that move people.",
+  "Creativity with a purpose. Strategy with impact.",
+  "More than marketing. A growth mindset.",
+  "Make your brand impossible to ignore.",
 ];
 
-export type ServiceIcon =
-  | "target"
-  | "megaphone"
-  | "camera"
-  | "sparkles"
-  | "search"
-  | "users";
+/** Présentation officielle de l'agence */
+export const manifesto = {
+  lead: "Chez Growth, nous pensons que les grandes marques ne sont pas faites pour être vues. Elles sont faites pour qu'on s'en souvienne.",
+  paragraphs: [
+    "Nous sommes une agence créative et stratégique qui aide les entreprises à bâtir des identités fortes, à renforcer leur présence digitale et à transformer leurs ambitions en résultats mesurables.",
+    "En réunissant réflexion stratégique, direction artistique, technologies innovantes et marketing piloté par la donnée, nous créons des expériences qui relient les marques aux gens et transforment l'attention en action.",
+    "De la stratégie de marque à la production artistique, de la performance digitale au développement web, nous proposons des solutions intégrées pour que les marques se démarquent, créent du lien et grandissent.",
+  ],
+  signature: "We don't just market brands. We build their next chapter.",
+};
 
-export const services: {
-  icon: ServiceIcon;
-  title: string;
-  text: string;
-  points: string[];
-}[] = [
+export type PillarIcon = "gem" | "palette" | "chart" | "cpu";
+
+export const pillars: { icon: PillarIcon; title: string; subtitle: string; text: string }[] = [
+  { icon: "gem", title: "Strategy", subtitle: "Stratégie", text: "Branding, positionnement, études de marché, conseil." },
+  { icon: "palette", title: "Creativity", subtitle: "Créativité", text: "Direction artistique, photographie, vidéo, design." },
+  { icon: "chart", title: "Performance", subtitle: "Performance", text: "Media buying, SEO, analytics, optimisation des conversions." },
+  { icon: "cpu", title: "Technology", subtitle: "Technologie", text: "Sites web, e-commerce, CRM, automatisation." },
+];
+
+/** Les 7 pôles d'expertise */
+export const services: { title: string; text: string; points: string[] }[] = [
   {
-    icon: "target",
-    title: "Stratégie digitale",
-    text: "Audit, positionnement et plan d'action clair pour savoir où investir chaque dinar.",
-    points: ["Audit de marque", "Personas & offre", "Plan média"],
+    title: "Branding & Brand Strategy",
+    text: "Construire une marque avec une identité forte et une vraie personnalité.",
+    points: [
+      "Positionnement & étude de marché",
+      "Identité visuelle & logo",
+      "Storytelling & ton de marque",
+      "Architecture de marque",
+      "Rebranding & charte graphique",
+      "Naming & création de marque",
+    ],
   },
   {
-    icon: "megaphone",
-    title: "Publicité en ligne",
-    text: "Campagnes Meta, Google et TikTok Ads pilotées au résultat : leads, ventes, réservations.",
-    points: ["Meta & Google Ads", "Tracking & pixel", "Optimisation continue"],
+    title: "Creative Production & Art Direction",
+    text: "Créer du contenu visuel qui donne une signature à chaque marque.",
+    points: [
+      "Shootings artistiques",
+      "Photographie produit & mode",
+      "Direction artistique",
+      "Production vidéo publicitaire",
+      "Reels & formats courts",
+      "Contenus UGC & influence",
+      "Concepts de campagne & storytelling visuel",
+      "Montage vidéo & motion design",
+    ],
   },
   {
-    icon: "users",
-    title: "Social media",
-    text: "Une présence régulière et cohérente qui fait grandir une vraie communauté autour de votre marque.",
-    points: ["Ligne éditoriale", "Calendrier & publication", "Modération"],
+    title: "Digital Marketing & Social Media",
+    text: "Développer une présence digitale cohérente et engageante.",
+    points: [
+      "Gestion des réseaux sociaux",
+      "Stratégie & planning de contenu",
+      "Community management",
+      "Audit social media",
+      "Marketing d'influence",
+      "Stratégie de communication digitale",
+      "E-réputation",
+    ],
   },
   {
-    icon: "camera",
-    title: "Création de contenu",
-    text: "Photos, vidéos et reels produits pour arrêter le scroll et donner envie d'acheter.",
-    points: ["Shooting photo", "Reels & UGC", "Motion design"],
+    title: "Performance Marketing & Data",
+    text: "Transformer les données en décisions et les campagnes en résultats.",
+    points: [
+      "Meta Ads & Google Ads",
+      "Media buying",
+      "Optimisation des campagnes",
+      "Suivi des conversions",
+      "Pixel & API de conversion",
+      "Analyse de données & reporting",
+      "CRO : optimisation du taux de conversion",
+      "Attribution marketing",
+    ],
   },
   {
-    icon: "sparkles",
-    title: "Branding",
-    text: "Une identité visuelle forte et premium, déclinée sur tous vos supports.",
-    points: ["Logo & charte", "Direction artistique", "Supports print"],
+    title: "Web Development & E-commerce",
+    text: "Créer des plateformes digitales pensées pour l'expérience et la conversion.",
+    points: [
+      "Sites vitrines & corporate",
+      "Sites e-commerce",
+      "WordPress & WooCommerce",
+      "Landing pages",
+      "Design UI/UX",
+      "Optimisation de site",
+      "Stratégie e-commerce",
+    ],
   },
   {
-    icon: "search",
-    title: "Site web & SEO",
-    text: "Des sites rapides qui convertissent et remontent sur Google quand vos clients vous cherchent.",
-    points: ["Landing pages", "Référencement local", "Google Business"],
+    title: "SEO & Digital Visibility",
+    text: "Améliorer la visibilité des marques sur les moteurs de recherche.",
+    points: [
+      "Stratégie SEO",
+      "SEO technique",
+      "SEO on-page & off-page",
+      "Recherche de mots-clés",
+      "SEO de contenu",
+      "SEO local",
+      "Optimisation Google Business Profile",
+    ],
+  },
+  {
+    title: "Consulting, CRM & Automation",
+    text: "Optimiser les processus marketing et améliorer la relation client.",
+    points: [
+      "Conseil marketing",
+      "Mise en place de CRM",
+      "E-mail marketing",
+      "Marketing automation",
+      "Génération de leads",
+      "Tunnels de vente",
+      "Parcours client",
+      "Stratégies de fidélisation",
+    ],
   },
 ];
 
-export const reasons = [
+/** Les 3 entités signature de l'agence */
+export const divisions = [
   {
-    title: "Orientés résultats",
-    text: "On mesure ce qui compte : leads, ventes et coût d'acquisition. Pas seulement des likes.",
+    name: "Growth Lab",
+    role: "Innovation, stratégie, data et expérimentation.",
+    text: "Le laboratoire où naissent les stratégies : études, tests, analyse et nouvelles approches pour garder une longueur d'avance.",
   },
   {
-    title: "Créa + média sous un même toit",
-    text: "Stratèges, créatifs et media buyers travaillent ensemble sur vos campagnes.",
+    name: "Growth Studio",
+    role: "Shootings, vidéos, branding et production.",
+    text: "Le studio créatif qui donne une signature visuelle aux marques, de l'identité à la dernière image de campagne.",
   },
   {
-    title: "Transparence totale",
-    text: "Un reporting clair chaque mois et un accès direct à vos comptes publicitaires.",
+    name: "Growth Performance",
+    role: "Acquisition, SEO, media buying et conversion.",
+    text: "L'équipe qui transforme l'attention en chiffre d'affaires, avec des campagnes pilotées et mesurées en continu.",
   },
-  {
-    title: "Connaissance du marché tunisien",
-    text: "Des messages, des formats et des budgets adaptés à votre audience locale.",
-  },
+];
+
+/** Offres packagées */
+export const offers = [
+  { name: "Brand Launch", content: ["Branding", "Identité visuelle", "Stratégie de lancement"], for: "Lancer une nouvelle marque" },
+  { name: "Digital Presence", content: ["Social media", "Création de contenu", "Community management"], for: "Exister et engager en ligne" },
+  { name: "Growth Performance", content: ["Meta Ads", "Google Ads", "Tracking", "Reporting"], for: "Générer des ventes et des leads", featured: true },
+  { name: "E-commerce Growth", content: ["Site web", "SEO", "Publicité", "Optimisation des conversions"], for: "Faire décoller une boutique en ligne" },
+  { name: "Creative Campaign", content: ["Concept", "Shooting", "Vidéos", "Campagne publicitaire"], for: "Marquer les esprits" },
+  { name: "Brand Transformation", content: ["Audit", "Repositionnement", "Branding", "Stratégie digitale"], for: "Réinventer une marque existante" },
+];
+
+export type ExtraIcon = "sparkles" | "package" | "mic" | "bot" | "orbit" | "briefcase";
+
+/** Services complémentaires qui différencient Growth */
+export const extras: { icon: ExtraIcon; title: string; text: string }[] = [
+  { icon: "sparkles", title: "Brand Experiences", text: "Événements, lancements de produits, activations de marque et expériences immersives." },
+  { icon: "package", title: "Packaging Design", text: "Packaging, étiquettes, supports imprimés et expérience unboxing." },
+  { icon: "mic", title: "Podcast & Personal Branding", text: "Production de podcasts, stratégie de personal branding et contenus pour dirigeants." },
+  { icon: "bot", title: "IA & Innovation marketing", text: "L'intelligence artificielle au service de la création, de l'analyse et de l'automatisation." },
+  { icon: "orbit", title: "Campagnes 360°", text: "Des campagnes intégrées : digital, influence, publicité et communication offline." },
+  { icon: "briefcase", title: "Communication corporate", text: "Présentations, profils d'entreprise, catalogues, brochures et communication B2B." },
 ];
 
 export const caseStudies = [
@@ -134,40 +218,28 @@ export const caseStudies = [
 ];
 
 export const steps = [
-  {
-    title: "Diagnostic",
-    text: "On analyse votre marque, vos concurrents et vos chiffres pour repérer les vrais leviers de croissance.",
-  },
-  {
-    title: "Stratégie",
-    text: "Objectifs, cibles, canaux, messages et budget : un plan précis validé ensemble.",
-  },
-  {
-    title: "Création & lancement",
-    text: "Contenus, visuels et campagnes produits par notre équipe, puis mis en ligne rapidement.",
-  },
-  {
-    title: "Optimisation",
-    text: "On teste, on mesure et on ajuste chaque semaine pour faire grimper vos résultats.",
-  },
+  { title: "Diagnostic", text: "Audit de la marque, du marché et de vos chiffres pour identifier les vrais leviers de croissance." },
+  { title: "Stratégie", text: "Positionnement, cibles, messages, canaux et budget : une feuille de route claire, validée ensemble." },
+  { title: "Création", text: "Identité, contenus, campagnes et plateformes produits par nos équipes Studio et Performance." },
+  { title: "Croissance", text: "Lancement, mesure et optimisation continue, avec un reporting transparent chaque mois." },
 ];
 
 export const testimonials = [
   {
     quote:
-      "En trois mois, notre page est passée d'une vitrine silencieuse à notre premier canal de réservations. L'équipe est réactive et vraiment créative.",
+      "Growth a repensé notre image de A à Z. Le nouveau branding et les campagnes ont changé la perception de notre restaurant, et les réservations ont suivi.",
     name: "Sami B.",
     role: "Gérant de restaurant, Tunis",
   },
   {
     quote:
-      "Enfin une agence qui parle chiffres. Chaque mois on sait exactement ce que rapporte chaque dinar investi en publicité.",
+      "Une agence qui allie vraie créativité et rigueur des chiffres. Chaque mois, nous savons exactement ce que rapporte chaque dinar investi.",
     name: "Ines K.",
     role: "Fondatrice d'une marque e-commerce",
   },
   {
     quote:
-      "Le nouveau branding et les vidéos ont complètement changé l'image de notre clinique. Les patients nous le disent directement.",
+      "Les shootings et les vidéos réalisés par le studio ont donné à notre clinique une image haut de gamme. Nos patients nous le disent directement.",
     name: "Dr Mehdi T.",
     role: "Directeur de clinique, Sousse",
   },
@@ -175,23 +247,27 @@ export const testimonials = [
 
 export const faqs = [
   {
-    q: "Avec quel budget peut-on commencer ?",
-    a: "Nous adaptons l'accompagnement à votre taille. On commence souvent par un pack social media ou une première campagne publicitaire, puis on fait évoluer le budget en fonction des résultats.",
+    q: "Quel type d'entreprises accompagnez-vous ?",
+    a: "Des marques ambitieuses de toutes tailles : startups, PME, enseignes et groupes, dans la mode, la beauté, la restauration, la santé, l'immobilier ou le B2B. Ce qui compte : la volonté de grandir.",
+  },
+  {
+    q: "Travaillez-vous uniquement en Tunisie ?",
+    a: "Non. Nous sommes basés à Tunis et accompagnons des marques en Tunisie comme à l'international. Les échanges se font sur place, en visio ou sur WhatsApp.",
+  },
+  {
+    q: "Peut-on choisir un seul service plutôt qu'une offre complète ?",
+    a: "Oui. Nos offres packagées couvrent les besoins les plus courants, mais toutes nos prestations sont aussi disponibles à la carte, notamment pour les entreprises qui ont déjà une équipe marketing.",
   },
   {
     q: "En combien de temps voit-on des résultats ?",
-    a: "Les campagnes publicitaires produisent des premiers résultats en quelques jours. Une stratégie de contenu et de référencement se construit sur 2 à 3 mois.",
+    a: "Les campagnes publicitaires produisent leurs premiers résultats en quelques jours. Un travail de marque, de contenu ou de référencement se construit sur deux à trois mois.",
   },
   {
-    q: "Travaillez-vous avec des entreprises hors de Tunis ?",
-    a: "Oui. Nous accompagnons des marques partout en Tunisie et à l'étranger. Les échanges se font en visio, par téléphone ou sur WhatsApp.",
-  },
-  {
-    q: "Est-ce que je garde l'accès à mes comptes ?",
-    a: "Toujours. Vos pages, vos comptes publicitaires et vos contenus vous appartiennent. Vous gardez un accès complet à tout moment.",
+    q: "Est-ce que je garde la propriété de mes comptes et contenus ?",
+    a: "Toujours. Vos pages, vos comptes publicitaires, vos fichiers et vos contenus vous appartiennent. Vous y gardez un accès complet à tout moment.",
   },
   {
     q: "Comment se passe le premier rendez-vous ?",
-    a: "Un échange gratuit de 30 minutes pour comprendre vos objectifs. Vous repartez avec un premier diagnostic et des recommandations concrètes, sans engagement.",
+    a: "Un échange de 30 minutes, gratuit et sans engagement, pour comprendre vos objectifs. Vous repartez avec un premier diagnostic et des pistes concrètes.",
   },
 ];

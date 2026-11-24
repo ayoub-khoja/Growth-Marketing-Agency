@@ -3,8 +3,9 @@
 @theme {
   /* Couleurs de la marque growth */
   --color-ink: #0c0c0d;
-  --color-paper: #fbf9f7;
-  --color-sand: #f4efea;
+  --color-paper: #f8f5ef; /* ivoire */
+  --color-sand: #efe7da; /* beige chaud */
+  --color-champagne: #c8a97e;
   --color-blush: #f8eef4;
   --color-ink-900: #0c0c0d;
   --color-ink-800: #131315;
@@ -19,7 +20,7 @@
   --color-magenta-700: #6c1c57;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-outfit), var(--font-inter), ui-sans-serif, sans-serif;
+  --font-display: var(--font-serif), ui-serif, Georgia, serif;
 
   --animate-marquee: marquee 38s linear infinite;
   --animate-float: float 7s ease-in-out infinite;
@@ -48,9 +49,13 @@
     background: var(--color-magenta-500);
     color: #fff;
   }
-  h1, h2, h3 {
+  h1, h2 {
     font-family: var(--font-display);
-    letter-spacing: -0.025em;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+  h3 {
+    letter-spacing: -0.01em;
   }
 }
 

@@ -4,7 +4,16 @@ import { useState } from "react";
 import { Send } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
-const needs = ["Publicité en ligne", "Social media", "Création de contenu", "Branding", "Site web & SEO", "Stratégie globale"];
+const needs = [
+  "Branding",
+  "Production créative",
+  "Social media",
+  "Performance & Ads",
+  "Site web & e-commerce",
+  "SEO",
+  "CRM & automation",
+  "Offre complète",
+];
 const budgets = ["Moins de 1 000 DT / mois", "1 000 – 3 000 DT / mois", "3 000 – 10 000 DT / mois", "Plus de 10 000 DT / mois"];
 
 /**
@@ -48,7 +57,7 @@ export function ContactForm() {
     const msg = buildMessage(form);
     if (msg)
       window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
-        "Demande d'audit gratuit"
+        "Nouveau projet avec Growth"
       )}&body=${encodeURIComponent(msg)}`;
   }
 

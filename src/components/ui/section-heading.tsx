@@ -30,7 +30,7 @@ export function SectionHeading({
         <span className={`h-px w-6 ${onDark ? "bg-white/25" : "bg-black/20"}`} />
         {eyebrow}
       </p>
-      <h2 className="mt-5 text-4xl leading-[1.05] font-semibold text-balance sm:text-5xl">{title}</h2>
+      <h2 className="mt-5 text-[2.75rem] leading-[1] text-balance sm:text-6xl">{title}</h2>
       {text ? (
         <p className={`mt-5 text-lg leading-relaxed text-pretty ${onDark ? "text-white/60" : "text-neutral-600"}`}>{text}</p>
       ) : null}
